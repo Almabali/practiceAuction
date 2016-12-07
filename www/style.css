@@ -1,6 +1,6 @@
-* {
-    border: 1px dashed gold;
-}
+/** {*/
+    /*border: 1px dashed gold;*/
+/*}*/
 header{
     display: flex;
     background: #353535;
