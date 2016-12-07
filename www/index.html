@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>SpendRace</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="myApp.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="flex-container" >
+    <header style="width: 100%">
+        <h1>SpendRace</h1>
+        <p>Total published bid: {{auctionTotalCounter()}}</p>
+        <img src="../resources/person-add.png" style="height: 52px; width: 52px;"/>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Navigation</a></li>
+            <li><a href="#">Auction</a></li>
+            <li><a href="#">Running Auctions</a></li>
+            <li><a href="#">My Auctions</a></li>
+        </ul>
+    </nav>
+
+    <div class="auctionContainer">
+        <h1 style="width: 100%"><strong>Applied</strong> auctions</h1>
+        <div class="auctionBox" ng-repeat="r in records">
+            <h4>VIP Auction Name</h4>
+            <p>Start price  {{r.price}}</p>
+            <p>Desciption {{r.description}}</p>
+            <div>
+                <button>Join</button>
+                <button>Fav</button>
+                <h4>VIP</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>Footer</footer>
+</div>
+
+</body>
+</html>
